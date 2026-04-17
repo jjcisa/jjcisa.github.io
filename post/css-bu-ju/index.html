@@ -1,22 +1,103 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://jjcisa.github.io</id>
-    <title>Gridea</title>
-    <updated>2026-04-17T14:18:29.671Z</updated>
-    <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://jjcisa.github.io"/>
-    <link rel="self" href="https://jjcisa.github.io/atom.xml"/>
-    <subtitle>温故而知新</subtitle>
-    <logo>https://jjcisa.github.io/images/avatar.png</logo>
-    <icon>https://jjcisa.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2026, Gridea</rights>
-    <entry>
-        <title type="html"><![CDATA[CSS布局]]></title>
-        <id>https://jjcisa.github.io/post/css-bu-ju/</id>
-        <link href="https://jjcisa.github.io/post/css-bu-ju/">
-        </link>
-        <updated>2026-04-17T14:17:40.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="现代网页布局">现代网页布局</h1>
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CSS布局 | Gridea</title>
+<link rel="shortcut icon" href="https://jjcisa.github.io/favicon.ico?v=1776435474627">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://jjcisa.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="CSS布局 | Gridea - Atom Feed" href="https://jjcisa.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="现代网页布局
+弹性布局
+
+应用场景：小兔鲜项目（大部分单栏两端（between）对齐）、可以把行内元素转换成块级元素进行多种对齐方式
+
+
+核心：1.父控子，父为容器，子为项目。2.主轴（排列方向）和交叉轴（移动方向）
+
+
+特点：1.若子元素..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://jjcisa.github.io">
+  <img class="avatar" src="https://jjcisa.github.io/images/avatar.png?v=1776435474627" alt="">
+  </a>
+  <h1 class="site-title">
+    Gridea
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              CSS布局
+            </h2>
+            <div class="post-info">
+              <span>
+                2026-04-17
+              </span>
+              <span>
+                6 min read
+              </span>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <h1 id="现代网页布局">现代网页布局</h1>
 <h2 id="弹性布局">弹性布局</h2>
 <blockquote>
 <p><strong>应用场景</strong>：小兔鲜项目（大部分单栏两端（between）对齐）、可以把行内元素转换成块级元素进行多种对齐方式</p>
@@ -265,6 +346,117 @@
   /* 对于谷歌浏览器兼容 */
   -webkit-column-break-inside: avoid-column;
 </code></pre>
-]]></content>
-    </entry>
-</feed>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li><a href="#%E7%8E%B0%E4%BB%A3%E7%BD%91%E9%A1%B5%E5%B8%83%E5%B1%80">现代网页布局</a>
+<ul>
+<li><a href="#%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80">弹性布局</a>
+<ul>
+<li><a href="#%E5%AF%B9%E9%BD%90%E6%96%B9%E5%BC%8F">对齐方式</a>
+<ul>
+<li><a href="#%E4%B8%BB%E8%BD%B4%E5%AF%B9%E9%BD%90%E6%96%B9%E5%BC%8F">主轴对齐方式</a></li>
+<li><a href="#%E4%BA%A4%E5%8F%89%E8%BD%B4%E5%AF%B9%E9%BD%90%E6%96%B9%E5%BC%8F">交叉轴对齐方式</a></li>
+</ul>
+</li>
+<li><a href="#%E4%B8%BB%E8%BD%B4%E6%96%B9%E5%90%91%E5%88%87%E6%8D%A2">主轴方向切换</a></li>
+<li><a href="#%E6%8D%A2%E8%A1%8C">换行</a></li>
+<li><a href="#%E9%97%B4%E8%B7%9D">间距</a></li>
+<li><a href="#%E5%BC%B9%E6%80%A7%E5%88%92%E5%88%86">弹性划分</a></li>
+</ul>
+</li>
+<li><a href="#%E5%AE%9A%E4%BD%8D%E5%B8%83%E5%B1%80">定位布局</a>
+<ul>
+<li><a href="#%E7%9B%B8%E5%AF%B9%E5%AE%9A%E4%BD%8D">相对定位</a></li>
+<li><a href="#%E7%BB%9D%E5%AF%B9%E5%AE%9A%E4%BD%8D">绝对定位</a></li>
+<li><a href="#%E5%9B%BA%E5%AE%9A%E5%AE%9A%E4%BD%8D">固定定位</a></li>
+<li><a href="#%E7%B2%98%E6%80%A7%E5%AE%9A%E4%BD%8D">粘性定位</a></li>
+<li><a href="#%E5%B1%82%E5%8F%A0%E9%A1%BA%E5%BA%8F">层叠顺序</a></li>
+<li><a href="#%E6%80%BB%E7%BB%93">总结</a></li>
+</ul>
+</li>
+<li><a href="#%E7%BD%91%E6%A0%BC%E5%B8%83%E5%B1%80">网格布局</a>
+<ul>
+<li><a href="#%E5%88%9B%E5%BB%BA%E7%BD%91%E6%A0%BC%E8%BD%A8%E9%81%93">创建网格轨道</a>
+<ul>
+<li><a href="#%E8%A1%8C%E8%BD%A8%E9%81%93%E5%92%8C%E5%88%97%E8%BD%A8%E9%81%93">行轨道和列轨道</a></li>
+<li><a href="#%E8%BD%A8%E9%81%93%E5%AF%B9%E9%BD%90%E6%96%B9%E5%BC%8F">轨道对齐方式</a></li>
+</ul>
+</li>
+<li><a href="#%E9%A1%B9%E7%9B%AE%E5%AF%B9%E9%BD%90%E6%96%B9%E5%BC%8F">项目对齐方式</a></li>
+<li><a href="#gap%E7%BD%91%E6%A0%BC%E9%97%B4%E9%9A%99">gap网格间隙</a>
+<ul>
+<li><a href="#%E7%BD%91%E6%A0%BC%E7%BA%BF">网格线</a></li>
+<li><a href="#%E7%BD%91%E6%A0%BC%E5%A1%AB%E5%85%85%E9%A1%BA%E5%BA%8F">网格填充顺序</a></li>
+<li><a href="#object-fit">object-fit</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E5%A4%9A%E5%88%97%E5%B8%83%E5%B1%80">多列布局</a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://jjcisa.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
